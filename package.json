@@ -1,0 +1,51 @@
+{
+  "name": "electron-react-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Electron react boilerplate.",
+  "author": "Lennart Le",
+  "copyright": "© 2018",
+  "main": "public/electron.js",
+  "homepage": ".",
+  "dependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "electron-is-dev": "^1.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "electron": "^4.1.0",
+    "electron-builder": "^20.39.0",
+    "react-scripts": "2.1.8",
+    "wait-on": "^3.2.0"
+  },
+  "scripts": {
+    "start": "concurrently \"react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
+    "build": "react-scripts build && electron-builder"
+  },
+  "build": {
+    "appId": "com.example.electron-react",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "public"
+    },
+    "nsis": {
+      "perMachine": true,
+      "uninstallDisplayName": "Electron-react"
+    },
+    "publish": null
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

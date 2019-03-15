@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 2s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: tomato;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  animation: back infinite 5s linear;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.navBar {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  background: #464646e0;
+  -webkit-app-region: drag;
+}
+
+@keyframes App-logo-spin {
+  0% {
+    transform: rotate(0deg) scale(0.2);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.2);
+  }
+}
+
+@keyframes back {
+  0% {
+    background: tomato;
+  }
+  35% {
+    background: seagreen;
+  }
+  70% {
+    background: steelblue;
+  }
+  100% {
+    background: tomato;
+  }
+}
