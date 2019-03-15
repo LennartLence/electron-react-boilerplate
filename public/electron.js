@@ -9,7 +9,7 @@ app.on("ready", () => {
     minHeight: 300,
     show: false,
     frame: false,
-    transparent: true,
+    transparent: true
     // resizable: false
     // backgroundColor: "#191919",
   });
@@ -20,9 +20,20 @@ app.on("ready", () => {
 
   mainWindow.once("ready-to-show", () => {
     mainWindow.show();
-  });
 
-  if (isDev) mainWindow.openDevTools();
+    if (isDev) {
+      mainWindow.openDevTools();
+
+      const {
+        default: installExtension,
+        REACT_DEVELOPER_TOOLS
+      } = require("electron-devtools-installer");
+
+      installExtension(REACT_DEVELOPER_TOOLS)
+        .then(name => console.log(`Added Extension:  ${name}`))
+        .catch(err => console.log("An error occurred: ", err));
+    }
+  });
 });
 
 app.on("window-all-closed", () => {

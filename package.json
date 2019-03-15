@@ -8,19 +8,20 @@
   "main": "public/electron.js",
   "homepage": ".",
   "dependencies": {
+    "electron-is-dev": "^1.0.1",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "electron-is-dev": "^1.0.1"
+    "react-dom": "^16.8.4"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
     "electron": "^4.1.0",
     "electron-builder": "^20.39.0",
+    "electron-devtools-installer": "^2.2.4",
     "react-scripts": "2.1.8",
     "wait-on": "^3.2.0"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
+    "start": "concurrently -s first  -r -k \"react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
     "build": "react-scripts build && electron-builder"
   },
   "build": {
