@@ -4,49 +4,57 @@
   "private": true,
   "description": "Electron react boilerplate.",
   "author": "Lennart Le",
-  "copyright": "© 2018",
-  "main": "public/electron.js",
-  "homepage": ".",
+  "copyright": "© 2019",
+  "license": "ISC",
+  "main": "./electron.js",
   "dependencies": {
     "electron-is-dev": "^1.0.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },
   "devDependencies": {
-    "concurrently": "^4.1.0",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-inline-react-svg": "^1.0.1",
+    "node-sass": "^4.11.0",
+    "css-loader": "^2.1.1",
     "electron": "^4.1.0",
     "electron-builder": "^20.39.0",
-    "electron-devtools-installer": "^2.2.4",
-    "react-scripts": "2.1.8",
-    "wait-on": "^3.2.0"
+    "electron-devtools-installer": "^2.2.3",
+    "eslint": "^5.15.2",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
   },
   "scripts": {
-    "start": "concurrently -s first  -r -k \"react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
-    "build": "react-scripts build && electron-builder"
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --display-error-details --mode production && electron-builder"
   },
   "build": {
     "appId": "com.example.electron-react",
     "files": [
-      "build/**/*",
-      "node_modules/**/*",
-      "package.json"
+      "package.json",
+      {
+        "from": "./build"
+      }
     ],
     "directories": {
-      "buildResources": "public"
+      "buildResources": "resources"
     },
     "nsis": {
       "perMachine": true,
       "uninstallDisplayName": "Electron-react"
     },
     "publish": null
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  }
 }

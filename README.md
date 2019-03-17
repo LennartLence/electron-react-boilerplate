@@ -1,4 +1,4 @@
-<img src="public/icon.ico" width="100px">
+<img src="resources/icon.ico" width="100px">
 <h1>Simple electron react boilerplate.</h1>
 
 ## Available Scripts

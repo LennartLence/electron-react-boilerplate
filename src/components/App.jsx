@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ReactComponent as Logo } from "./logo.svg";
+import Logo from "./logo.svg";
 import "./App.css";
 
 import NavBar from "./NavBar";
