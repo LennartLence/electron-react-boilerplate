@@ -17,7 +17,7 @@ export default class App extends Component {
       <div className="App">
         <NavBar />
         <Logo className="App-logo" />
-        <p>Electron React Boilerplate.</p>
+        <p>Electron React Boilerplate!</p>
       </div>
     );
   }
