@@ -1,10 +1,12 @@
+/* eslint-disable*/
+
 const { app, BrowserWindow } = require("electron");
 const isDev = require("electron-is-dev");
 
-// if (process.platform === "win32") {
-//   app.commandLine.appendSwitch("high-dpi-support", "true");
-//   app.commandLine.appendSwitch("force-device-scale-factor", "1");
-// }
+if (process.platform === "win32") {
+  app.commandLine.appendSwitch("high-dpi-support", "true");
+  app.commandLine.appendSwitch("force-device-scale-factor", "1");
+}
 
 app.on("ready", () => {
   const mainWindow = new BrowserWindow({
@@ -19,9 +21,7 @@ app.on("ready", () => {
     // backgroundColor: "#191919",
   });
 
-  mainWindow.loadURL(
-    isDev ? "http://localhost:8080" : `file://${__dirname}/index.html`
-  );
+  mainWindow.loadURL(`file://${__dirname}/index.html`);
 
   mainWindow.once("ready-to-show", () => {
     mainWindow.show();

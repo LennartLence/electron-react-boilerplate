@@ -1,21 +1,24 @@
 import React, { Component } from "react";
-import Logo from "./logo.svg";
+
 import "./App.css";
 
 import NavBar from "./NavBar";
+import Logo from "./logo.svg";
 
-class App extends Component {
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <NavBar />
-          <Logo className="App-logo" />
-          <p>Electron React Boiledplate.</p>
-        </header>
+        <NavBar />
+        <Logo className="App-logo" />
+        <p>Electron React Boilerplate.</p>
       </div>
     );
   }
 }
-
-export default App;

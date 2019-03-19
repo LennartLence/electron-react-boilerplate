@@ -20,6 +20,8 @@
   "rules": {
     "quotes": "off",
     "linebreak-style": "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "arrow-parens": "off",
+    "arrow-body-style": "off"
   }
 }

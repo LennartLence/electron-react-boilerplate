@@ -1,21 +1,34 @@
-const { spawn } = require("child_process");
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
+const { spawn } = require("child_process");
+const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
-  entry: {
-    build: "./src/index.jsx",
-    electron: "./electron.js"
-  },
+  devtool: "inline-source-map",
+
+  entry: "./src/index.jsx",
+
   output: {
-    filename: "[name].js",
-    path: path.resolve(__dirname, "build")
+    publicPath: "http://localhost:8080/",
+    path: path.resolve(__dirname, "build/webpack"),
+    filename: "build.js"
   },
+
+  externals: [
+    nodeExternals({
+      modulesFromFile: {
+        include: ["dependencies"]
+      }
+    })
+  ],
+
   target: "electron-renderer",
+
   node: {
     __dirname: false,
     __filename: false
   },
+
   module: {
     rules: [
       {
@@ -50,19 +63,21 @@ module.exports = {
       }
     ]
   },
+
   plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      excludeChunks: ["electron"]
+    new webpack.HotModuleReplacementPlugin({
+      multiStep: true
     })
   ],
+
   resolve: {
     extensions: [".wasm", ".mjs", ".js", ".jsx", ".json"]
   },
+
   devServer: {
-    contentBase: path.resolve(__dirname, "src"),
-    compress: true,
+    contentBase: path.resolve(__dirname, "build"),
     hot: true,
+    publicPath: "http://localhost:8080/",
     before: () => {
       spawn("electron", ["."], {
         shell: true,
