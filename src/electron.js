@@ -16,7 +16,7 @@ app.on("ready", () => {
     minHeight: 300,
     show: false,
     frame: false,
-    transparent: true
+    // transparent: true
     // resizable: false,
     // backgroundColor: "#191919",
   });
