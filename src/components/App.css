@@ -28,10 +28,10 @@ body {
 
 .navBar {
   position: absolute;
-  height: 50px;
+  height: 40px;
   width: 100%;
   top: 0;
-  background: #474747e0;
+  background: #3b3b3be0;
   -webkit-app-region: drag;
 }
 
