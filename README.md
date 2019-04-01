@@ -1,5 +1,5 @@
 <img src="resources/icon.ico" width="100px">
-<h1>Electron react boilerplate</h1>
+<h1>Styled electron react boilerplate</h1>
 <h3>Optimized eslint, webpack, HMR and native modules in simple way.</h1>
 
 ## Available Scripts
