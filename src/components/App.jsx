@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 import "./App.css";
 
-import NavBar from "./NavBar";
-import Logo from "./logo.svg";
+import AppContainer from "./AppContainer/AppContainer";
+import AppNavbar from "./AppNavbar/AppNavbar";
 
 export default class App extends Component {
   constructor(props) {
@@ -15,9 +15,8 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBar />
-        <Logo className="App-logo" />
-        <p>Electron React Boilerplate</p>
+        <AppNavbar />
+        <AppContainer />
       </div>
     );
   }

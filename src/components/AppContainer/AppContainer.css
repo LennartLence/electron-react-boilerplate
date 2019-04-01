@@ -1,0 +1,50 @@
+.AppContainer {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 2s linear;
+  height: 200px;
+  width: 200px;
+  pointer-events: none;
+}
+
+h1 {
+  color: #ffffff82;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes App-logo-spin {
+  0% {
+    transform: rotate(0deg) scale(0.2);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.2);
+  }
+}
