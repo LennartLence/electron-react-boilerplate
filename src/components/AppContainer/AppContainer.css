@@ -1,14 +1,12 @@
 .AppContainer {
   position: absolute;
-  top: 40px;
+  top: 36px;
   left: 0;
   right: 0;
   bottom: 0;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: Gradient 15s ease infinite;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
