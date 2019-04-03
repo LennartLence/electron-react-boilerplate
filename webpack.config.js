@@ -72,7 +72,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, "build"),
     hot: true,
     publicPath: "http://localhost:8080/",
-    before: () => {
+    after: () => {
       spawn("electron", ["."], {
         shell: true,
         env: process.env,
