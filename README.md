@@ -1,6 +1,10 @@
-<img src="resources/icon.ico" width="100px">
-<h1>Styled electron react boilerplate</h1>
-<h3>Optimized eslint, webpack, HMR and native modules in simple way.</h1>
+
+<p align="center"><img src="resources/icon.ico" width="100px"></p>
+<h1 align="center">Styled electron react boilerplate</h1>
+
+<p align="center"><img src="https://media.giphy.com/media/88jheD4jgd2fQpGXWk/giphy.gif" width="400px"></p>
+
+<h3 align="center">Optimized eslint, webpack, HMR and native modules in simple way.</h1>
 
 ## Available Scripts
 
