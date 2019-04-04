@@ -10,7 +10,7 @@ if (process.platform === "win32") {
 
 app.on("ready", () => {
   const mainWindow = new BrowserWindow({
-    width: 800,
+    width: 500,
     height: 600,
     minWidth: 400,
     minHeight: 300,
