@@ -16,7 +16,10 @@ app.on("ready", () => {
     minHeight: 300,
     show: false,
     frame: false,
-    transparent: true
+    transparent: true,
+    webPreferences: {
+      nodeIntegration: true
+    }
     // resizable: false,
     // backgroundColor: "#191919",
   });
@@ -35,8 +38,8 @@ app.on("ready", () => {
         REDUX_DEVTOOLS
       } = require("electron-devtools-installer");
 
-      installExtension([REACT_DEVELOPER_TOOLS])
-      installExtension([REDUX_DEVTOOLS])
+      installExtension([REACT_DEVELOPER_TOOLS]);
+      installExtension([REDUX_DEVTOOLS]);
     }
   });
 });
