@@ -1,8 +1,13 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
 import ReactDOM from "react-dom";
-import { AppContainer } from "react-hot-loader";
+import { AppContainer, setConfig } from "react-hot-loader";
 
 import App from "./components/App";
+
+setConfig({
+  showReactDomPatchNotification: false
+});
 
 const render = Component => {
   ReactDOM.render(
