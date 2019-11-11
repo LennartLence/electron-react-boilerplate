@@ -59,9 +59,10 @@
       "buildResources": "resources",
       "output": "build/release"
     },
+    "productName": "Electron React Boilerplate",
     "nsis": {
       "perMachine": true,
-      "uninstallDisplayName": "Electron-react"
+      "uninstallDisplayName": "Electron React Boilerplate"
     },
     "publish": null
   }

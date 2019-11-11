@@ -18,7 +18,8 @@ app.on("ready", () => {
     frame: false,
     transparent: true,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      devTools: true
     }
     // resizable: false,
     // backgroundColor: "#191919",
